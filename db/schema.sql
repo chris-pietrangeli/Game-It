@@ -1,3 +1,3 @@
 DROP DATABASE IF EXISTS game_it_db;
 
-CREATE DATABASE gmae_it_db;
+CREATE DATABASE game_it_db;
