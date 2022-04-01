@@ -5,7 +5,7 @@
   </h2>
   <form class="edit-post-form">
     <div class="text-light">
-      <input name="post-title" type="text" value="{{post.post_message}}" />
+      <input name="post-message" type="text" value="{{post.post_message}}" />
     </div>
     <div class="text-light">
       {{post.vote_count}} {{format_plural "point" post.vote_count}} by you on {{format_date post.created_at}}
