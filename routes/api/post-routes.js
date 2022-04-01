@@ -2,14 +2,13 @@ const sequelize = require('../../config/connection');
 const router = require('express').Router();
 const { Post, User, Vote, Comment } = require('../../models');
 
-// get all posts
+// get all post messages
 router.get('/', (req, res) => {
     console.log('======================');
     Post.findAll({
         attributes: [
             'id', 
-            'post_url', 
-            'title', 
+            'post_message', 
             'created_at',
             [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
         ],
@@ -50,8 +49,7 @@ router.get('/:id', (req, res) => {
         },
         attributes: [
             'id',
-            'post_url',
-            'title',
+            'post_message',
             'created_at',
             [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
         ],
@@ -91,7 +89,6 @@ router.get('/:id', (req, res) => {
 
 
 router.post('/', (req, res) => {
-    //expects {title: 'Taskmaster goes public!', post_url: 'https://taskmaster.com/press', user_id: 1}
     Post.create({
         title: req.body.title,
         post_url: req.body.post_url,
@@ -104,9 +101,7 @@ router.post('/', (req, res) => {
         });
 });
 
-//PUT /api/posts/upvote
 router.put('/upvote', (req, res) => {
-    //custom static method created in models/Post.js
     Post.upvote(req.body, { Vote })
         .then(updatedPostData => res.json(updatedPostData))
         .catch(err => {
@@ -115,11 +110,11 @@ router.put('/upvote', (req, res) => {
         });
 });
 
-//update post
+//update post message
 router.put('/:id', (req, res) => {
     Post.update(
         {
-            title: req.body.title
+            post_message: req.body.post_message
         },
         {
             where: {
