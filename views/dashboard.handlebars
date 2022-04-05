@@ -3,8 +3,7 @@
 
   <form class="new-post-form">
     <div class="text-light">
-      <label for="post-message">Post</label>
-      <textarea id="post-message" name="post-message"></textarea>
+      <textarea id="post-message" class="form-control h-25 mb-2" name="post-message"></textarea>
     </div>
     <button type="submit" class="btn btn-primary">Create</button>
   </form>
@@ -13,7 +12,7 @@
 
 <section>
   <h2 class="text-light">Your Posts</h2>
-  <ol class="">
+  <ol class="list-unstyled">
     {{#each posts as |post|}}
     <li class="bg-dark p-2 border border-primary mb-2">
       {{> post-info post}}

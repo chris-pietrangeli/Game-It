@@ -6,36 +6,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Game-It</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
 <body class="bg-dark">
-  <div class="wrapper">
-    <header>
-      <h1>
-        <a class="h1 text-primary" href="/">Game-It</a>
-      </h1>
-      <nav>
+  <div class="container">
+    <header class="border-bottom">
+      <nav class="navbar">
+        <h1>
+          <a class="text-primary" href="/">Game-It</a>
+        </h1>
         {{#if loggedIn}}
         <a href="/dashboard">dashboard</a>
-        <button id="logout" class="btn-no-style">logout</button>
+        <span id="logout" class="btn btn-primary">logout</span>
         {{else}}
-        <a class="text-primary" href="/login">login</a>
+        <a class="btn btn-primary" href="/login">login</a>
         {{/if}}
       </nav>
     </header>
     <main>
       {{{ body }}}
     </main>
-    <footer class="text-light">
-      Thanks for visiting!
-    </footer>
   </div>
   {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
   {{/if}}
 
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>
