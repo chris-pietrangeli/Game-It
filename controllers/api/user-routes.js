@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Post, Comment, Vote } = require('../../models');
+const { User, Post, Comment, Liked } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // get all users
@@ -37,8 +37,8 @@ router.get('/:id', (req, res) => {
         model: Post,
         //delete me if not used
         attributes: ['I am in the user-routes.js file'],
-        through: Vote,
-        as: 'voted_posts'
+        through: Liked,
+        as: 'liked_posts'
       }
     ]
   })
