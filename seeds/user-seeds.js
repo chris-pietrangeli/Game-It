@@ -3,64 +3,64 @@ const {User, Post} = require('../models');
 
 const fakeuserdata = [
     {
-        username: "",
-        email: "",
-        password: ""
+        username: "thebigcheese",
+        email: "bigcheese@example.com",
+        password: "helloworld754"
     },
     {
-        username: "",
-        email: "",
-        password: ""
+        username: "spartan885",
+        email: "spartan885@example.com",
+        password: "helloworld759"
     },
     {
-        username: "",
-        email: "",
-        password: ""
+        username: "brutekilla",
+        email: "brutekilla@example.com",
+        password: "helloworld7532"
     },
     {
-        username: "",
-        email: "",
-        password: ""
+        username: "hobbitrunner4482",
+        email: "hobbitrunner44@example.com",
+        password: "helloworld7285"
     },
     {
-        username: "",
-        email: "",
-        password: ""
+        username: "lostsoul876",
+        email: "lostsoul87@example.com",
+        password: "helloworld7595"
     },
     {
-        username: "",
-        email: "",
-        password: ""
+        username: "worldruler975",
+        email: "worldruler@example.com",
+        password: "helloworld75865"
     },
     {
-        username: "",
-        email: "",
-        password: ""
+        username: "shaquille.oatmeal",
+        email: "shaquille.oatmeal@example.com",
+        password: "helloworld75767"
     },
     {
-        username: "",
-        email: "",
-        password: ""
+        username: "Yellowsnowman",
+        email: "yellowsnowman@example.com",
+        password: "helloworld75490"
     },
     {
-        username: "",
-        email: "",
-        password: ""
+        username: "Babushka1",
+        email: "babushka1@example.com",
+        password: "helloworld754343"
     },
     {
-        username: "",
-        email: "",
-        password: ""
+        username: "Badkarma4883",
+        email: "badkarma4883@example.com",
+        password: "helloworld754766"
     },
     {
-        username: "",
-        email: "",
-        password: ""
+        username: "averagestudent5083",
+        email: "averagestudent5083@example.com",
+        password: "helloworld75895"
     },
     {
-        username: "",
-        email: "",
-        password: ""
+        username: "Regina_Phalange",
+        email: "regina_phalange@example.com",
+        password: "helloworld7541"
     },
 ];
 

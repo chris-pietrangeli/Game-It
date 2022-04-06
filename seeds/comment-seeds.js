@@ -91,6 +91,6 @@ const fakecommentdata = [
     },
 ];
 
-const fakeseedComments = () => Comments.bulkCreate(fakecommentdata);
+const seedFakeComments = () => Comments.bulkCreate(fakecommentdata);
 
-module.exports = fakeseedComments;
+module.exports = seedFakeComments;

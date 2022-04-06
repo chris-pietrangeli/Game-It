@@ -59,6 +59,6 @@ const fakelikeddata = [
     
 ];
 
-const fakeseedLiked = () => Liked.bulkCreate(fakelikeddata);
+const seedFakeLiked = () => Liked.bulkCreate(fakelikeddata);
 
-module.exports = fakeseedLiked;
+module.exports = seedFakeLiked;

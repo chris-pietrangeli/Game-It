@@ -66,5 +66,5 @@ const fakepostdata = [
     },
 ];
 
-const fakePosts = () => Post.bulkCreate(fakepostdata);
-module.exports = fakePosts;
+const seedFakePosts = () => Post.bulkCreate(fakepostdata);
+module.exports = seedFakePosts;
