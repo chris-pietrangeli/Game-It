@@ -1,0 +1,25 @@
+<section>
+  <h2 class="text-light">Create New Post</h2>
+
+  <form class="new-post-form">
+    <div class="text-light">
+      <textarea id="post-message" class="form-control h-25 mb-2" name="post-message"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+  </form>
+</section>
+
+
+<section>
+  <h2 class="text-light">Your Posts</h2>
+  <ol class="list-unstyled">
+    {{#each posts as |post|}}
+    <li class="bg-dark p-2 border border-primary mb-2">
+      {{> post-info post}}
+      <a href="/dashboard/edit/{{post.id}}" class="edit-link btn btn-primary">Edit post</a>
+    </li>
+    {{/each}}
+  </ol>
+</section>
+
+<script src="/javascript/add-post.js"></script>

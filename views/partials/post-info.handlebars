@@ -1,0 +1,14 @@
+<article class="post">
+    <div class="title">
+       <h6 class="text-light">{{user.username}}</h6>
+    </div>
+    <div class="meta text-light">
+        <p class="text-light">{{post_message}}</p>
+        {{liked_count}} {{format_plural "Like" liked_count}}
+        |
+        <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+    </div>
+    <div>
+       <h6 class="text-light">Posted on: {{format_date created_at}}</h6>
+    </div>
+</article>
