@@ -55,3 +55,11 @@ Simply create a new account, or sign-in with a current account and start discuss
   Jace Burgess
   Chris Pietrangeli
   Jared Hemingway
+
+  ## Deployed Link
+  https://game-it1.herokuapp.com/
+
+  ## Screenshots
+  <img src="./public/images/dashboard.png" />
+  <img src="./public/images/homepage.png" />
+  <img src="./public/images/login.png" />
