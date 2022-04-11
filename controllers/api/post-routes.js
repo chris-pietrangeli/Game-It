@@ -2,7 +2,7 @@ const router = require('express').Router();
 const sequelize = require('../../config/connection');
 const { Post, User, Comment, Liked } = require('../../models');
 const withAuth = require('../../utils/auth');
-// get all users
+
 router.get('/', (req, res) => {
   console.log('======================');
   Post.findAll({
@@ -74,7 +74,7 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', withAuth, (req, res) => {
-  // expects {: 'Taskmaster goes public!', post_message: 'https://taskmaster.com/press', user_id: 1}
+
   Post.create({
     post_message: req.body.post_message,
     user_id: req.session.user_id
@@ -87,9 +87,9 @@ router.post('/', withAuth, (req, res) => {
 });
 
 router.put('/liked', withAuth, (req, res) => {
-  // make sure the session exists first
+
   if (req.session) {
-    // pass session id along with all destructured properties on req.body
+
     Post.liked({ ...req.body, user_id: req.session.user_id }, { Liked, Comment, User })
       .then(updatedLikedData => res.json(updatedLikedData))
       .catch(err => {
